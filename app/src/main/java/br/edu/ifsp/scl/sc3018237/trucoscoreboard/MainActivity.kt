@@ -3,6 +3,7 @@ package br.edu.ifsp.scl.sc3018237.trucoscoreboard
 import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
+import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -13,6 +14,9 @@ class MainActivity : AppCompatActivity() {
     private var  pontoA = 0
     private var pontoB = 0
 
+    private lateinit var botaoMais3A : Button
+    private lateinit var botaoMais3B : Button
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -21,11 +25,14 @@ class MainActivity : AppCompatActivity() {
 
         val placarEquipeA = findViewById<TextView>(R.id.placarA)
         val botaoMais1A= findViewById<Button>(R.id.add1A)
-        val botaoMais3A = findViewById<Button>(R.id.add3A)
+
+
 
         val placarEquipeB = findViewById<TextView>(R.id.placarB)
         val botaoMais1B = findViewById<Button>(R.id.add1B)
-        val botaoMais3B = findViewById<Button>(R.id.add3B)
+
+        botaoMais3A = findViewById<Button>(R.id.add3A)
+        botaoMais3B = findViewById<Button>(R.id.add3B)
 
         botaoMais1A.setOnClickListener {
             pontoA++
@@ -49,5 +56,12 @@ class MainActivity : AppCompatActivity() {
 
 
 
+    }
+    private fun jogorTruco(){
+
+        if(pontoA  == 11){
+            Toast.makeText(this, "Equipe A esta na mão de 11!", Toast.LENGTH_SHORT).show()
+            botaoMais3A.isEnabled = false
+        }
     }
 }
