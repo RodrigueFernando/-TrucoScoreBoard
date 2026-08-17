@@ -9,7 +9,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="60dp"
         android:text="Equipe A"
-        android:textSize="24sp" />
+        android:textSize="40sp" />
     
     <TextView
         android:id="@+id/pontos"
@@ -25,6 +25,24 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="+1 ponto"/>
+
+   <TextView
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_marginTop="60dp"
+       android:text="Equipe B"
+       android:textSize="40sp"/>
+
+   <TextView
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:text="0"
+       android:textSize="40sp"/>
+   <Button
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:text="+1 ponto"/>
+
 
 
 
