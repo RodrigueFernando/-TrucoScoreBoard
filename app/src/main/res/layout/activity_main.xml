@@ -25,6 +25,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="+1 ponto"/>
+    <Button
+        android:id="@+id/add3A"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="+3 ponto"/>
 
    <TextView
        android:layout_width="match_parent"
@@ -44,6 +49,13 @@
        android:layout_width="match_parent"
        android:layout_height="wrap_content"
        android:text="+1 ponto"/>
+
+
+  <Button
+      android:id="@+id/add3B"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="+3 ponto"/>
 
 
 
