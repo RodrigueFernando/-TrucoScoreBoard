@@ -67,6 +67,11 @@ class MainActivity : AppCompatActivity() {
         botaoResetaPlacar.setOnClickListener {
             placarEquipeA.text = "0"
             placarEquipeB.text = "0"
+            botaoMais3A.isEnabled = true
+            botaoMais1A.isEnabled = true
+            botaoMais3B.isEnabled = true
+            botaoMais1B.isEnabled = true
+            avisouMaoDe11A = true
 
         }
 
