@@ -36,6 +36,8 @@ class MainActivity : AppCompatActivity() {
         botaoMais3A = findViewById<Button>(R.id.add3A)
         botaoMais3B = findViewById<Button>(R.id.add3B)
 
+        val botaoResetaPlacar = findViewById<Button>(R.id.resetar)
+
         botaoMais1A.setOnClickListener {
             pontoA++
             placarEquipeA.text = "$pontoA"
@@ -59,6 +61,16 @@ class MainActivity : AppCompatActivity() {
             placarEquipeB.text =  pontoB.toString()
             jogarTruco()
         }
+
+        botaoResetaPlacar.setOnClickListener {
+            pontoA = 0;
+            pontoB = 0
+
+            placarEquipeA.text = pontoA.toString()
+            placarEquipeB.text = pontoB.toString()
+        }
+
+
 
 
 
