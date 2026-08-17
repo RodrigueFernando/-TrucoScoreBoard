@@ -19,6 +19,8 @@ class MainActivity : AppCompatActivity() {
     private  lateinit var botaoMais1A : Button
     private lateinit var  botaoMais1B : Button
 
+    private  var  avisouMaoDe11A = false
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -63,11 +65,9 @@ class MainActivity : AppCompatActivity() {
         }
 
         botaoResetaPlacar.setOnClickListener {
-            pontoA = 0;
-            pontoB = 0
+            placarEquipeA.text = "0"
+            placarEquipeB.text = "0"
 
-            placarEquipeA.text = pontoA.toString()
-            placarEquipeB.text = pontoB.toString()
         }
 
 
@@ -77,9 +77,20 @@ class MainActivity : AppCompatActivity() {
     }
     private fun jogarTruco(){
 
-        if(pontoA  >= 11){
+        if(pontoA  > 11){
             botaoMais3A.isEnabled = false
-            Toast.makeText(this, "Equipe A esta na mão de 11!", Toast.LENGTH_SHORT).show()
+            if(!avisouMaoDe11A ){
+                Toast.makeText(this, "Equipe A esta na mão de 11!", Toast.LENGTH_SHORT).show()
+                avisouMaoDe11A = true
+            }
+
+
+        }
+
+        if(pontoA  >= 12){
+            botaoMais3A.isEnabled = false
+            botaoMais1A.isEnabled = false
+            Toast.makeText(this, "Equipe A venceu", Toast.LENGTH_SHORT).show()
 
         }
 
@@ -87,6 +98,15 @@ class MainActivity : AppCompatActivity() {
            Toast.makeText(this,"Equipe B esta na mão de 11!", Toast.LENGTH_SHORT).show()
            botaoMais3B.isEnabled = false
        }
+
+       if(pontoB  >= 12 || pontoA >= 12){
+            botaoMais3B.isEnabled = false
+            botaoMais1B.isEnabled = false
+            Toast.makeText(this, "Equipe A venceu", Toast.LENGTH_SHORT).show()
+
+       }
+
+
 
 
 
