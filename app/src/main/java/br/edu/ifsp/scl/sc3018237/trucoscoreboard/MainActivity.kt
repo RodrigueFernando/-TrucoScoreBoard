@@ -5,6 +5,7 @@ import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
@@ -65,8 +66,10 @@ class MainActivity : AppCompatActivity() {
         }
 
         botaoResetaPlacar.setOnClickListener {
-            placarEquipeA.text = "0"
-            placarEquipeB.text = "0"
+            pontoA = 0
+            pontoB = 0
+            placarEquipeA.text = pontoA.toString()
+            placarEquipeB.text = pontoB.toString()
             botaoMais3A.isEnabled = true
             botaoMais1A.isEnabled = true
             botaoMais3B.isEnabled = true
@@ -82,7 +85,7 @@ class MainActivity : AppCompatActivity() {
     }
     private fun jogarTruco(){
 
-        if(pontoA  > 11){
+        if(pontoA  >= 11){
             botaoMais3A.isEnabled = false
             if(!avisouMaoDe11A ){
                 Toast.makeText(this, "Equipe A esta na mão de 11!", Toast.LENGTH_SHORT).show()
@@ -95,7 +98,12 @@ class MainActivity : AppCompatActivity() {
         if(pontoA  >= 12){
             botaoMais3A.isEnabled = false
             botaoMais1A.isEnabled = false
-            Toast.makeText(this, "Equipe A venceu", Toast.LENGTH_SHORT).show()
+           // Toast.makeText(this, "Equipe A venceu", Toast.LENGTH_SHORT).show()
+            AlertDialog.Builder(this)
+                .setTitle("Fim de jogo!")
+                .setMessage("Equipe A venceu!")
+                .setPositiveButton("OK", null)
+                .show()
 
         }
 
@@ -107,7 +115,13 @@ class MainActivity : AppCompatActivity() {
        if(pontoB  >= 12 || pontoA >= 12){
             botaoMais3B.isEnabled = false
             botaoMais1B.isEnabled = false
-            Toast.makeText(this, "Equipe A venceu", Toast.LENGTH_SHORT).show()
+           //Toast.makeText(this, "Equipe A venceu", Toast.LENGTH_SHORT).show()
+           AlertDialog.Builder(this)
+               .setTitle("Fim de jogo!")
+               .setMessage("Equipe B venceu!")
+               .setPositiveButton("OK", null)
+               .show()
+
 
        }
 
