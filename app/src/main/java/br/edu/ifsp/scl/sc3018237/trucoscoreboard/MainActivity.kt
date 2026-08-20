@@ -95,9 +95,11 @@ class MainActivity : AppCompatActivity() {
 
         }
 
-        if(pontoA  >= 12){
+        if(pontoA  >= 12 ){
             botaoMais3A.isEnabled = false
             botaoMais1A.isEnabled = false
+            botaoMais3B.isEnabled = false
+            botaoMais1B.isEnabled = false
            // Toast.makeText(this, "Equipe A venceu", Toast.LENGTH_SHORT).show()
             AlertDialog.Builder(this)
                 .setTitle("Fim de jogo!")
@@ -112,9 +114,11 @@ class MainActivity : AppCompatActivity() {
            botaoMais3B.isEnabled = false
        }
 
-       if(pontoB  >= 12 || pontoA >= 12){
-            botaoMais3B.isEnabled = false
-            botaoMais1B.isEnabled = false
+       if(pontoB  >= 12 ){
+           botaoMais3B.isEnabled = false
+           botaoMais1B.isEnabled = false
+           botaoMais3A.isEnabled = false
+           botaoMais1A.isEnabled = false
            //Toast.makeText(this, "Equipe A venceu", Toast.LENGTH_SHORT).show()
            AlertDialog.Builder(this)
                .setTitle("Fim de jogo!")

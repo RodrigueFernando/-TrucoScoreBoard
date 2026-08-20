@@ -10,63 +10,62 @@
         android:layout_marginTop="60dp"
         android:text="Equipe A"
         android:textSize="40sp" />
-    
+
     <TextView
         android:id="@+id/placarA"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="0"
-        android:textSize="40sp"/>
+        android:textSize="40sp" />
 
-       <!-- app:layout_constraintTop_toBottomOf="@+id/pontos"/> -->
+    <!-- app:layout_constraintTop_toBottomOf="@+id/pontos"/> -->
 
     <Button
         android:id="@+id/add1A"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="+1 ponto"/>
+        android:text="+1 ponto" />
+
     <Button
         android:id="@+id/add3A"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="+3 ponto"/>
+        android:text="+3 ponto" />
 
-   <TextView
-       android:layout_width="match_parent"
-       android:layout_height="wrap_content"
-       android:layout_marginTop="60dp"
-       android:text="Equipe B"
-       android:textSize="40sp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:text="Equipe B"
+        android:textSize="40sp" />
 
-   <TextView
-       android:id="@+id/placarB"
-       android:layout_width="match_parent"
-       android:layout_height="wrap_content"
-       android:text="0"
-       android:textSize="40sp"/>
-   <Button
-       android:id="@+id/add1B"
-       android:layout_width="match_parent"
-       android:layout_height="wrap_content"
-       android:text="+1 ponto"/>
+    <TextView
+        android:id="@+id/placarB"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textSize="40sp" />
 
-
-  <Button
-      android:id="@+id/add3B"
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      android:text="+3 ponto"/>
+    <Button
+        android:id="@+id/add1B"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="+1 ponto" />
 
 
-   <Button
-       android:id="@+id/resetar"
-       android:layout_width="match_parent"
-       android:layout_height="wrap_content"
-       android:layout_marginTop="100dp"
-       android:text="Resetar placar"/>
+    <Button
+        android:id="@+id/add3B"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="+3 ponto" />
 
 
-
+    <Button
+        android:id="@+id/resetar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:text="Resetar placar" />
 
 
 </LinearLayout>
